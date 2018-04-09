@@ -1,0 +1,15 @@
+{
+  "name": "webshop-bi",
+  "description": "charting app for the webshop stats.",
+  "version": "1.0.0",
+  "main": "splash.html",
+  "window": {
+    "icon" : "img/b.png",
+    "show": true,
+    "toolbar": true,
+    "frame": false,
+    "position": "center",
+    "width": 400,
+    "height": 250
+  }
+}

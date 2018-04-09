@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Tendai Chikake">
+
+    <link rel="shortcut icon" href="img/favicon.png">
+	<link rel="favicon" href="img/favicon.png">
+
+    <title>WebShop-stats[login]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Libs -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <!-- CSS App -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="app/style.css">
+</head>
+
+<body class="login-page">
+  <div class="container-fluid" id="window-app-titlebar">
+      <div class="window-action-buttons">
+        <div class="window-action-minimize">
+          <a class="window-action-minimizebutton" id="window-action-minimizebutton">&ndash;</a>
+        </div>
+
+        <div class="window-action-zoom">
+          <a class="window-action-zoombutton" id="window-action-zoombutton">+</a>
+        </div>
+
+        <div class="window-action-close">
+          <a class="window-action-closebutton" id="window-action-closebutton">x</a>
+        </div>
+      </div>
+    </div>
+<img src="img/logo.gif" alt="" width="100" height="100" class="pull-r">
+   <div class="container ">
+     <div class="card login-box">
+        <div class="card-header">
+            <div class="card-title">
+                <div class="title"><h1 class="title">Welcome to WebShop-stats app</h1></div>
+            </div>
+        </div>
+        <div class="card-body">
+            <form class="form-horizontal login"  method="POST">
+              <div class="form-group">
+                    <div class="col-sm-12" id="error-login">
+                    </div>
+                 </div>
+
+                  <div class="form-group">
+                      <label for="email" class="col-sm-12 pull-left">Электронная почта</label>
+                      <div class="col-sm-12">
+                          <input class="form-control" id="email" name="email" placeholder="эл. почта" type="email">
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="password" class="col-sm-12 pull-left">пароль</label>
+                      <div class="col-sm-12">
+                          <input class="form-control" id="password" placeholder="пароль" name="password" type="password">
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                      <div class="col-sm-12">
+                          <button type="submit" class="btn btn-default pull-left">Ввести</button>
+                      </div>
+                  </div>
+            </form>
+        	</div>
+            <div class="modal-footer">
+              <div class="col-sm-4 pull-left no-padding no-margin">
+                <a href="license.html" class="pull-left no-padding no-margin">Лицензия</a>
+              </div>
+
+            Войдите, что бы продолжить работу или <a id="signup"> зарегистрируйтесь</a>
+          </div>
+        </div>
+       </div>
+
+<script type="text/javascript" src="libs/jquery.min.js"></script>
+<script type="text/javascript" src="libs/bootstrap.min.js"></script>
+<script src="libs/functions.js"></script>
+<script type="text/javascript" src="libs/app.js"></script>
+
+</body>
+
+</html>

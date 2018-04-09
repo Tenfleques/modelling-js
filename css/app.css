@@ -1,0 +1,157 @@
+body {
+  background: #ecf0f1;
+  color: #000;
+  font-family: HelveticaNeue, 'Helvetica Neue', 'Lucida Grande',Arial, sans-serif;
+}
+.hidden{
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+#window-app-titlebar{
+  -webkit-app-region: drag;
+  height: 12px;
+}
+.window-action-buttons {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  height: 30px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  cursor: default;
+}
+.window-action-minimize {
+  position: absolute;;
+  top: 0px;
+  right: 60px;
+  background: #ffbd4c;
+  line-height: 12px;
+  font-size: 11pt;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #e09e3e;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0px;
+  padding-top: 0.02em;
+  padding-left: 0.13em;
+  -webkit-app-region: no-drag;
+}
+.window-action-zoom {
+  position: absolute;
+  top: 0px;
+  right: 36px;
+  background: #00ca56;
+  line-height: 11px;
+  font-size: 11pt;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #14ae46;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0px;
+  padding-top: 0.102em;
+  padding-left: 0.11em;
+  align-content: center;
+  -webkit-app-region: no-drag;
+}
+.window-action-close {
+  position: absolute;
+  top: 0px;
+  right: 12px;
+  background: #ff5c5c;
+  line-height: 11px;
+  font-size: 11pt;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #e33e41;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0px;
+  padding-top: 0.03em;
+  padding-left: 0.12em;
+  
+  padding-top: 0.102em;
+  padding-left: 0.175em;
+  align-content: center;
+  -webkit-app-region: no-drag;
+}
+
+.window-action-buttons:hover a {
+  visibility: visible;
+}
+
+.go-back{
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+}
+.window-action-close:active {
+  background: #c14645;
+  border: 1px solid #b03537;
+}
+
+.window-action-close:active .closebutton {
+  color: #4e0002;
+}
+
+.window-action-closebutton {
+  color: #820005;
+  visibility: hidden;
+  cursor: default;
+}
+
+
+.window-action-minimize:active {
+  background: #c08e38;
+  border: 1px solid #af7c33;
+}
+
+.window-action-minimize:active .window-action-minimizebutton {
+  color: #5a2607;
+}
+
+.window-action-minimizebutton {
+  color: #9a5518;
+  visibility: hidden;
+  cursor: default;
+}
+
+
+
+.window-action-zoom:active {
+  background: #029740;
+  border: 1px solid #128435;
+}
+
+.window-action-zoom:active .zoombutton {
+  color: #003107;
+}
+
+.window-action-zoombutton {
+  color: #006519;
+  visibility: hidden;
+  cursor: default;
+}
+.window-action-profile {
+  position:fixed;
+  top:17px;
+  right:12px;
+  -webkit-app-region: no-drag;
+}
+.dragless{
+  -webkit-app-region: no-drag;
+}
+.modal-footer a{
+  color: #00f;
+}
+#nav-left{
+  position: absolute;
+  top:0px;
+  bottom: 0px;
+  height: 90%;
+}
