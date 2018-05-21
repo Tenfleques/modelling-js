@@ -76,6 +76,7 @@
                         <h4 class="col-12 p-0">
                             <span class="international en"></span>
                             <span class="international ru"></span>
+                            Настройки
                         </h4>
                         <div class="col-12 border border-right-0 border-top-0 border-bottom-0">
                                 <span class="international en"></span>
@@ -83,25 +84,77 @@
                         </div>                        
                     </div> 
                     <div class="col-12 container-x">
-                        <div class="main-view card-columns"> 
+                        <div class="main-view"> 
+                            <form class="inputs">
+                                <div class="form-group row p-0">
+                                    <div class="text-center input col-3">
+                                        T<sub>1</sub>
+                                    </div>
+                                    <div class="text-center input  col-3">
+                                        T<sub>2</sub>
+                                    </div>
+                                    <div class="text-center input col-3">
+                                        T<sub>3</sub> 
+                                    </div>
+                                    <div class="col-12 row">
+                                        <input type="text" class="input src-input form-control ml-2 col-3" name="T1" placeholder="leave empty if n/a" value="4.21">
+                                        <input type="text" class="input src-input form-control ml-2 col-3" name="T2" placeholder="leave empty if n/a" value="3.19">
+                                        <input type="text" class="input src-input form-control ml-2 col-3" name="T3" placeholder="leave empty if n/a" value="0">
+                                    </div>                                
+                                </div>
+                                <div class="form-group row">
+                                    <div class="text-center input col-3">
+                                        k
+                                    </div>
+                                    <div class="text-center input col-3">
+                                        &tau;
+                                    </div>
+                                    <div class="text-center input col-3">
+                                        p
+                                    </div>
+                                    <div class="col-12 row">
+                                        <input type="text" class="input src-input form-control ml-2 col-3" name="k" placeholder="leave empty if n/a" value="12.1">
+                                        <input type="text" class="input src-input form-control ml-2 col-3" name="tau" placeholder="leave empty if n/a" value="0.5">
+                                        <input type="text" class="input src-input form-control ml-2 col-3" name="p" placeholder="leave empty if n/a" value="0.61">
+                                    </div>                                
+                                </div>
+                                <div class="form-group row">
+                                    <div class="text-center input col-3">
+                                        T<sub>0</sub>
+                                    </div>
+                                    <div class="text-center input col-3">
+                                        N
+                                    </div>
+                                    <div class="text-center input col-3">
+                                        F
+                                    </div> 
+                                    <div class="col-12 row">
+                                        <input type="text" class="input src-input form-control ml-2 col-3" name="T0" placeholder="leave empty if n/a" value="0.1">
+                                        <input type="text" class="input src-input form-control ml-2 col-3" name="N" placeholder="leave empty if n/a" value="500">
+                                        <input type="text" class="input src-input form-control ml-2 col-3" name="F" placeholder="leave empty if n/a" value="0.2">
+                                    </div>
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <div class="pl-2 row">
+                                        <button class="form-control btn btn-success col-9 update-settings">
+                                            <i class="fa fa-save"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>                                
                 </div>
                 <div class="sidenav-right pr-2 pl-0">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="toggle-sdpane nav-link" id="input-data-tab" data-toggle="tab" href="#input-data"><i class="fa fa-database"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="toggle-sdpane nav-link active" id="resultat-adekvatnocti-tab" data-toggle="tab" href="#resultat-adekvatnocti"><i class="fa fa-calculator"></i></a>
-                        </li>                        
-                    </ul>
-                    <div id="resultTabContent" class="p-3">
-                        <div class="sdpane hidden" id="input-data"></div>
-                        <div class="sdpane active" id="resultat-adekvatnocti">
-                    </div>
-                    
+                    <div>
+                        <small class="mt-3 sessions">
+                            
+                        </small>
                     </div>                    
+                    <div class="card live-dates nav-right m-0 mt-3 pt-2">
+
+                    </div> 
                 </div>                
             </div>
             <nav class="navbar fixed-bottom navbar-light bg-secondary border border-left-0 border-right-0 border-bottom-0">
@@ -117,18 +170,9 @@
         <script type="text/javascript" src="libs/jquery.min.js"></script>
         <script type="text/javascript" src="libs/popper.min.js"></script>
         <script type="text/javascript" src="libs/bootstrap.min.js"></script>
-        <script type="text/javascript" src="libs/jquery.flot.js"></script>
-
         <script type="text/javascript" src="libs/functions.js"></script>
-
         <script type="text/javascript" src="libs/app.js"></script>
         <script type="text/javascript" src="libs/navigation.js"></script>
-        <script type="text/javascript" src="js/htmlbuilder.js"></script>
-
-        
-        
-
-        <script type="text/javascript" src="js/matrix.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/settings.js"></script>
     </body>
 </html>

@@ -7,6 +7,17 @@ if (process.platform == "darwin") {
 }
 var appname = "Идентификация дискретной динамической модели по имитационной модели объекта";
 
+function getConfiguration(){
+	let fs = require("fs");
+	let CONFIG_FILE = "resources/config.json";
+	return JSON.parse(fs.readFileSync(CONFIG_FILE));;
+}
+function setConfiguration(CONFIG){
+	let fs = require("fs");
+	let CONFIG_FILE = "resources/config.json";
+	fs.writeFileSync(CONFIG_FILE,JSON.stringify(CONFIG));
+}
+
 document.onkeydown=disableconsole;
 function disableconsole(e){
 	/*evtobj = window.event? event : e;
@@ -25,7 +36,6 @@ $(function() {
 });
 
 function errorBox(){
-	//args[] = header, border, level
 	$("#errorBox-header").html(arguments[0]);
 	$("#errorBox-body").html(arguments[1]);
 	$("#close-btn-var-color").removeClass("btn-danger")
@@ -37,8 +47,6 @@ function errorBox(){
 }
 
 (function ($, window) {
-	
-
     $.fn.contextMenu = function (settings) {
 		 	return this.each(function () {
 				var contextField = $(this).parent()
@@ -72,11 +80,13 @@ function errorBox(){
 				});
 			});
   	};
-    $(".copyright").html("Fleques Board &copy;"+new Date().getFullYear());
+    $(".copyright").html(appname + " &copy; "+new Date().getFullYear());
     document.onkeydown = function(event) {
       switch (event.keyCode) {
-        case 8:
-          window.history.back();
+				case 8:
+					return;
+					break;
+        //  window.history.back();
         //case 37: //go left
         //    break;
         //case 39: //go right
@@ -94,12 +104,32 @@ function errorBox(){
     });
     $("#window-action-zoombutton").on('click',function() {
       gui.Window.get().toggleFullscreen();
-		});
-		$(".appname").html(appname);
-		$(".show-page").on("click",function(){
-			$(".main-view").addClass("hidden");
-			$("#"+$(this).data("open")).removeClass("hidden");
-		})
-
-    gui.Window.get().show();
+	});
+	$(".toggle-sdpane").on("click",function(){
+		$(".toggle-sdpane").removeClass("active");
+		$(this).addClass("active");
+		$(".sdpane").addClass("hidden").removeClass("active");
+		$(".sdpane"+$(this).attr("href")).removeClass("hidden").addClass("active");
+	})
+	$(".toggle-language").on("click",function(){
+		$(".international").css("display","none");
+		$(".international."+$(this).val()).css("display","block");
+	})
+	$(".appname").html(appname);
+		
+		gui.Window.get().show();
 })(jQuery, window);
+
+jQuery.fn.extend({
+	connectionError : function(){
+		var html = "";		
+		if(arguments[0])
+			html += arguments[0];
+		else{
+			html = "<a href='settings.html' class='card p-3'>";
+			html += "A connection error occured, check if the REST settings are correctly configured or if the server is up";
+			html += "</a>"
+		}	
+		this.html(html);
+	}
+})

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Tendai Chikake">
+
+        <link rel="shortcut icon" href="img/favicon.png">
+        <link rel="favicon" href="img/favicon.png">
+        <title></title>
+        <!--[if lte IE 8]>
+            <script src="js/excanvas.js"></script>
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+    </head>
+
+    <body>
+
+        <div class="modal fade errorBox" id="errorBox" tabindex="-1" role="dialog" aria-labelledby="errorBox" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content card">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="errorBox-header"></h4>
+                    </div>
+                    <div class="modal-body" id="errorBox-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-sm-12">
+                            <button type="button" id="close-btn-var-color" class="btn btn-primary btn-danger" data-dismiss="modal" aria-label="Close">
+                            Закрыть
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="row mt-3">                
+                <div class="col-8">                                        
+                    <div class="main-view" >
+                        <h4>Графика результаты</h4>
+                        <div id="chart">
+                            
+                        </div>
+                    </div>                    
+                </div>                
+            </div>             
+        </div>
+    
+
+
+
+        <script type="text/javascript" src="libs/jquery.min.js"></script>
+        <script type="text/javascript" src="libs/popper.min.js"></script>
+        <script type="text/javascript" src="libs/bootstrap.min.js"></script>
+        <script type="text/javascript" src="libs/jquery.flot.js"></script>
+        <script type="text/javascript" src="libs/app.js"></script>
+
+        <script type="text/javascript" src="js/charts.js"></script>
+        <script type="text/javascript" src="libs/functions.js"></script>
+
+        <script type="text/javascript" src="js/matrix.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/tests.js"></script>
+        
+    </body>
+</html>

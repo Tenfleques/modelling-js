@@ -11,5 +11,8 @@
     "position": "center",
     "width": 400,
     "height": 250
+  },
+  "dependencies": {
+    "mathjs": "latest"
   }
 }
